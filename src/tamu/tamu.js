@@ -8,6 +8,13 @@ const historyList = document.getElementById("historyList");
 
 const baseUrl = "https://wedding-juliadi-admiati.netlify.app/";
 
+function clearHistory() {
+  if (confirm("Yakin mau menghapus semua riwayat link?")) {
+    localStorage.removeItem("guestLinks");
+    historyList.innerHTML = "";
+  }
+}
+
 function renderGreeting(name) {
   if (!name) {
     greetingText.textContent = "Halo, tamu undangan";
