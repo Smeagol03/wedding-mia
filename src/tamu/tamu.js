@@ -6,7 +6,7 @@ const copyBtn = document.getElementById("copyBtn");
 const greetingText = document.getElementById("greetingText");
 const historyList = document.getElementById("historyList");
 
-const baseUrl = window.location.origin + window.location.pathname;
+const baseUrl = "https://wedding-juliadi-admiati.netlify.app/";
 
 function renderGreeting(name) {
   if (!name) {
