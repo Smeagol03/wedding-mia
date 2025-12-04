@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Tamu</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+
+<body>
+    <!-- Form undangan: paste ini di tempat yang kamu mau di HTML -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="max-w-2xl mx-auto bg-white/80 dark:bg-slate-900/60 p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-3" style="font-family:'Poppins',sans-serif;color:#be185d;">
+                Tulis Nama Tamu
+            </h2>
+
+            <!-- Preview salam -->
+            <div id="greetingWrap" class="mb-4">
+                <p class="text-gray-700 dark:text-gray-200" id="greetingText"
+                    style="font-family:'Quicksand',sans-serif;">
+                    Halo, tamu undangan
+                </p>
+            </div>
+
+            <!-- Form -->
+            <form id="guestForm" class="flex gap-2">
+                <label for="guestName" class="sr-only">Nama Tamu</label>
+                <input id="guestName" name="guestName" type="text" placeholder="Contoh: Sindi dan pani"
+                    class="flex-1 px-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    autocomplete="off" required />
+                <button type="submit" class="px-4 py-2 rounded-lg bg-pink-600 text-white hover:bg-pink-700">
+                    Generate
+                </button>
+            </form>
+
+            <!-- Hasil link -->
+            <div id="resultBox" class="mt-6 hidden">
+                <p class="text-sm text-gray-500 mb-1">Link Undangan:</p>
+                <div class="flex gap-2 items-center">
+                    <input id="generatedLink" type="text" readonly
+                        class="flex-1 px-3 py-2 rounded-lg border focus:outline-none" />
+                    <button id="copyBtn" class="px-3 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700">
+                        Copy
+                    </button>
+                </div>
+            </div>
+
+            <!-- Riwayat link (Local Storage) -->
+            <div class="mt-6">
+                <h4 class="font-semibold mb-2 text-sm text-gray-600">Riwayat Link</h4>
+                <ul id="historyList" class="text-sm space-y-1"></ul>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./tamu.js"></script>
+</body>
+
+</html>
